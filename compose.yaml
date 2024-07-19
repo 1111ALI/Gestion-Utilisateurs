@@ -1,0 +1,16 @@
+services:
+  postgres-server:
+    image: postgres
+    container_name: postgres-server
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: local-test
+
+  adminer:
+    image: adminer
+    container_name: console-adminer
+    restart: always
+    ports:
+      - 9880:8080
